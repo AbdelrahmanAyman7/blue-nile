@@ -23,8 +23,9 @@ const SignUpForm  = () => {
       phone: data.phone,
     })
     
-    .then(res => {
-     console.log("hello",res)
+    .then(res => {  
+      alert("تم انشاء الحساب الرجاء تسجيل الدخول")
+      window.location.reload()
     })
     .catch(err => {
       console.log(err) 
