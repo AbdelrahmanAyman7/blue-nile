@@ -128,7 +128,7 @@ const removeAdminsRegion = (id) => {
          <div className = "myheader" id = "navHeader">
           <div className = "menu">
               <li>
-             <label for="drop-1" class="toggle">المهندسين</label>
+             <label for="drop-1" className ="toggle">المهندسين</label>
              <ul>
              {admins.map((adminn,id) => (
               <li><input type = "checkbox" 
@@ -138,7 +138,7 @@ const removeAdminsRegion = (id) => {
              </ul> 
              </li>
               <li>
-            <label for="drop-2" class="toggle">المناطق</label>
+            <label for="drop-2" className ="toggle">المناطق</label>
              <ul>
              {regions.map((regionn,id) => (
               <li><input type = "checkbox" onChange = {()=>getRegionId(regionn.R_name)}></input>{regionn.R_name}</li>

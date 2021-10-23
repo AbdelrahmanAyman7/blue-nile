@@ -9,10 +9,11 @@ import Regions from './pages/Regions/Regions';
 import Statics from './pages/Statics/Statics';
 import Support from './pages/Support/Support';
 import Admin from "./pages/Admin/Admin";
-// import {useHistory } from 'react-router';
+
 
 
 const App = () => {
+  
 const [change,setChange]=useState(false)
 
 
