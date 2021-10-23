@@ -80,14 +80,13 @@ const Regions = () => {
         <div className="container col-12">
         <div className="row"> 
         {regions.map((regionn,id) => (
-            <div className = "card col-sm-2" key = {regionn.id} onClick = {() => removeRegions(regionn._id)}>
+            <div className = "card col-sm-2" key = {regionn.id}>
             <div className = "removeRegion">
-            <span>X</span>
+            <span onClick = {() => removeRegions(regionn._id)}>X</span>
             </div>
             <img src = {img1} className = "card-img-top" alt = {regionn.title} />
             <div className = "card-body">
              <h5 className = "card-title">{regionn.R_name}</h5>
-             <div className = "myDetails">التفاصيل</div> 
              </div>
             </div>     
         ))} 

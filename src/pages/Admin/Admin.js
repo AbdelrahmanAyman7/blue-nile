@@ -166,7 +166,6 @@ const removeAdminsRegion = (id) => {
             <h5 className = "card-title">{allDataa.Enges.map(id=>{
               return <li style = {{listStyle:"none"}}>{id}</li>
             })}</h5>
-            <div className = "myDetails">التفاصيل</div> 
             </div>
             </div>     
             
