@@ -1,0 +1,377 @@
+.homepageLink {
+  display: block;
+  position: relative;
+  float: right;
+  background: #060b26;
+  padding: 2rem;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+}
+
+#navHeader {
+  display: none;
+  overflow: hidden;
+}
+.Apply {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ApplyBtn {
+  padding: 5px 0px;
+  background-color: #1a83ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
+.chooseAdmin {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.chooseAdminInput {
+  width: 500px;
+}
+.chooseAdmin h2 {
+  padding: 15px;
+}
+.main {
+  background-color: #060b26;
+  height: 100%;
+}
+
+.row {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.card {
+  width: auto;
+  height: auto;
+  max-height: auto;
+  min-width: 15rem !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 1px;
+}
+
+.cardInfo {
+  margin-top: 5px;
+  margin: 0.5rem;
+  text-decoration: none !important;
+  list-style: none !important;
+}
+.card-title {
+  font-size: medium;
+  color: rgb(0, 0, 0);
+}
+
+.myDetails {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border: none;
+  background-color: #060b267e;
+  color: gold;
+  border-radius: 2px;
+  font-size: 30px;
+  font-weight: 700;
+  transform: translateY(100%);
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.card :hover .myDetails {
+  transform: translateY(0%);
+  transition: all 0.8s ease-in-out;
+}
+nav {
+  margin: 0;
+  padding: 0;
+  background-color: #060b26;
+  height: 100%;
+  min-height: 100vh;
+}
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: white;
+  list-style: none;
+  margin-left: 2rem;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 250px;
+  background: #060b26;
+  cursor: pointer;
+  flex-direction: column;
+  max-height: 180px;
+  overflow: scroll;
+}
+ul li {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #060b26;
+  padding: 1em;
+  text-decoration: none;
+  white-space: nowrap;
+  color: #fff;
+  width: 250px;
+}
+
+li ul {
+  display: none;
+  /* height: 400px; */
+}
+
+li:hover > ul {
+  display: block;
+  position: absolute;
+  /* overflow: scroll; */
+  z-index: 5;
+}
+
+li:hover li {
+  float: none;
+}
+
+.main-navigation li ul li {
+  border-top: 0;
+}
+
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+ul:before,
+ul:after {
+  content: " ";
+  display: table;
+}
+
+ul:after {
+  clear: both;
+}
+ul input {
+  display: inline;
+  margin: 3px;
+}
+.Apply {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  margin-left: 7px;
+}
+.ApplyBtn {
+  padding: 8px 20px;
+}
+li ul {
+  display: none;
+  /* height: 400px; */
+}
+
+li:hover > ul {
+  display: block;
+  position: absolute;
+  /* overflow: scroll; */
+  z-index: 5;
+}
+
+li:hover li {
+  float: none;
+}
+
+.main-navigation li ul li {
+  border-top: 0;
+}
+
+ul ul ul {
+  left: 100%;
+  top: 0;
+}
+
+ul:before,
+ul:after {
+  content: " ";
+  display: table;
+}
+
+ul:after {
+  clear: both;
+}
+ul input {
+  display: inline;
+  margin: 3px;
+}
+.Apply {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  margin-right: 1rem;
+}
+.ApplyBtn {
+  padding: 8px 20px;
+}
+
+@media (max-width: 800px) {
+  * {
+    font-size: 13px !important;
+  }
+  .homepageLink {
+    display: block;
+    position: relative;
+    float: right;
+    background: #060b26;
+    padding: 2rem;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+  }
+  .logo {
+    width: 30px;
+    height: 25px;
+    margin-left: 2rem !important;
+  }
+  nav {
+    margin: 0;
+    padding: 0;
+  }
+  nav:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: white;
+    list-style: none;
+    margin-left: 2rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 250px;
+    background: #060b26;
+    cursor: pointer;
+    flex-direction: column;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+  ul li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #060b26;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+    width: 250px;
+  }
+
+  /* This hides the dropdowns */
+  li ul {
+    display: none;
+    width: 200px;
+  }
+  /* Display the dropdown */
+  li:hover > ul {
+    display: block;
+    position: absolute;
+    overflow: scroll;
+    z-index: 5;
+  }
+  /* Remove float from dropdown lists */
+  li:hover li {
+    float: none;
+  }
+
+  .main-navigation li ul li {
+    border-top: 0;
+  }
+  /* Displays second level dropdowns to the right of the first level dropdown */
+  ul ul ul {
+    left: 100%;
+    top: 0;
+  }
+
+  /* Simple clearfix */
+
+  ul:before,
+  ul:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+
+  ul:after {
+    clear: both;
+  }
+  .adminList input {
+    position: absolute;
+    left: -25px;
+    top: 22px;
+  }
+  .Apply {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  .ApplyBtn {
+    padding: 5px 8px;
+  }
+  .logoContainer {
+    display: block;
+    position: relative;
+    float: right;
+    background: #060b26;
+    padding: 2rem;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+  }
+}

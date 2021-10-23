@@ -1,0 +1,179 @@
+.main {
+  background-color: #060b26;
+  height: 100%;
+  min-height: 100vh;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  width: 50px;
+  height: 40px;
+  margin-top: 3px;
+}
+
+.addRegionInput {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  margin-right: 7rem;
+}
+.addRegionInput input {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 0.2rem 1.5rem;
+  margin-right: 1rem;
+  outline: none;
+}
+.addRegionBtn {
+  padding: 5px 25px;
+  background-color: #1a83ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
+.row {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.card {
+  width: auto;
+  height: auto;
+  max-height: auto;
+  min-width: 15rem !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 1px;
+}
+
+.card img {
+  height: 14rem;
+  width: 11rem;
+  -webkit-animation-name: opacity;
+  animation-name: opacity;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  max-height: 200px;
+  cursor: pointer;
+}
+
+.cardInfo {
+  margin-top: 5px;
+  margin: 0.5rem;
+  text-decoration: none !important;
+  list-style: none !important;
+}
+.card-title {
+  font-size: medium;
+  color: rgb(0, 0, 0);
+}
+
+.myDetails {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  border: none;
+  background-color: #060b267e;
+  color: gold;
+  border-radius: 2px;
+  font-size: 30px;
+  font-weight: 700;
+  transform: translateY(100%);
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.card :hover .myDetails {
+  transform: translateY(0%);
+  transition: all 0.8s ease-in-out;
+}
+.removeRegion {
+  border-radius: 2px;
+  background-color: #060b26;
+  padding: 3px 8px;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 89%;
+  cursor: pointer;
+}
+.removeRegion span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+@media (max-width: 800px) {
+  * {
+    font-size: 13px;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-right: 20px;
+  }
+
+  .addRegionInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .addRegionInput input {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 0.5px;
+    width: 100px;
+    outline: none;
+  }
+  .addRegionBtn {
+    display: block;
+    position: relative;
+    float: right;
+    background: #1a83ff;
+    padding: 1px 4px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: #fff;
+  }
+  .logo {
+    width: 25px;
+    height: 20px;
+    padding-bottom: 2px;
+    margin-left: 2rem !important;
+  }
+}

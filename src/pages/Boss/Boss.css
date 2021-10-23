@@ -1,0 +1,179 @@
+:root {
+  background-color: #fff;
+}
+.BlueNile {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  color: #fff;
+  padding: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.BlueNileLogo {
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+/* .navbar {
+  background-color: #1a83ff;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+} */
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+}
+
+.nav-menu {
+  background-color: var(--navBg);
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  z-index: 5;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 5px 0 8px 16px;
+  list-style: none;
+  height: 120px !important;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 18px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #1a83ff;
+}
+
+.nav-menu-items {
+  width: 100%;
+  padding: 0;
+}
+
+.navbar-toggle {
+  background-color: #060b267e;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
+
+/* carousel */
+.d-block {
+  height: 100vh;
+  border: none;
+  border: 1px transparent;
+  box-shadow: 10px 10px 5px #ccc;
+  -moz-box-shadow: 10px 10px 5px #ccc;
+  -webkit-box-shadow: 10px 10px 5px #ccc;
+  -khtml-box-shadow: 10px 10px 5px #ccc;
+}
+.carousel-caption h2 {
+  font-weight: 700;
+  color: white;
+  text-align: left !important;
+  width: 50%;
+  margin-right: auto;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.carousel-caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 2rem;
+}
+.sr-only {
+  display: none;
+}
+.logout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+  margin: 5px;
+  margin-top: 1rem;
+  border: none;
+  background-color: #253d86;
+  color: white;
+  border-radius: 40px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 45rem;
+  text-decoration: none !important;
+  list-style: none !important;
+}
+.logout:hover {
+  background-color: #285aeb;
+  color: white;
+}
+@media (max-width: 800px) {
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 5px 0 8px 16px;
+    list-style: none;
+    height: 100px !important;
+    margin: auto;
+  }
+  .BlueNileLogo {
+    width: 40px;
+    height: 25px;
+    position: absolute;
+    bottom: 35px;
+  }
+  .carousel-caption h2 {
+    font-size: 17px;
+    height: auto !important;
+    width: 100% !important;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+  .logout {
+    padding: 0.3rem 1rem;
+    font-size: 16px;
+    margin-left: 43rem;
+  }
+}
