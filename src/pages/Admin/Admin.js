@@ -65,6 +65,7 @@ console.log("data",data)
   .then(load=>{
     if (load.data === "this name is exsist before"){
       alert("هذا المهندس تم تسكينه من قبل علي هذه المنطقة")
+      window.location.reload()
     } else{
       alert("تم التسكين بنجاح")
       window.location.reload()
