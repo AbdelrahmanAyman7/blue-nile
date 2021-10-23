@@ -34,7 +34,7 @@ const Boss = () => {
 
   return (
     <Fragment>
-      <IconContext.Provider value={{ color: "#FFF" }}>
+      <IconContext.Provider value={{ color: "#FFF",size:"1.5em" }}>
       
         {/* All the icons now are white */}
         

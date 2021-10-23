@@ -16,7 +16,7 @@
   height: 40px;
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 18px;
 }
 /* .navbar {
   background-color: #1a83ff;
@@ -160,12 +160,12 @@ span {
   }
   .BlueNileLogo {
     width: 40px;
-    height: 25px;
+    height: 28px;
     position: absolute;
     bottom: 35px;
   }
   .carousel-caption h2 {
-    font-size: 17px;
+    font-size: 15px !important;
     height: auto !important;
     width: 100% !important;
     margin-bottom: 1rem;

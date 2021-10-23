@@ -65,7 +65,6 @@ console.log("data",data)
   .then(load=>{
     if (load.data === "this name is exsist before"){
       alert("هذا المهندس تم تسكينه من قبل علي هذه المنطقة")
-      // window.location.reload()
     } else{
       alert("تم التسكين بنجاح")
       window.location.reload()
@@ -75,12 +74,13 @@ console.log("data",data)
 
 }
 const removeAdminsRegion = (id) => {
-  axios.delete(`http://localhost:3000/Reg_Enge/Remove/${id}`,header)
+  axios.delete(`https://sleepy-mesa-34762.herokuapp.com/Reg_Enge/Remove/${id}`,header)
 
   .then(load=>{
       alert("تم حذف بنجاح")
       window.location.reload()
   })
+
 }
 
  useEffect(() => {
@@ -115,7 +115,7 @@ const removeAdminsRegion = (id) => {
     return ( 
   
       <Fragment>
-      <IconContext.Provider value={{ color: "#FFF", size:"1.1em"}}>
+      <IconContext.Provider value={{ color: "#FFF", size:"1.3em"}}>
       <nav>
       <Link to="./boss" className = "homepageLink">
       <img className = "logo" src = {logo} alt = "title"></img>
@@ -156,9 +156,9 @@ const removeAdminsRegion = (id) => {
          <div className="container col-12">
        <div className="row"> 
          {AllData.map((allDataa,id) => (
-             <div className = "card col-sm-2" key = {allDataa.id} onClick = {()=>removeAdminsRegion(allDataa._id)}>
+             <div className = "card col-sm-2" key = {allDataa.id}>
              <div className = "removeRegion">
-                <span>X</span>
+                <span onClick = {()=>removeAdminsRegion(allDataa._id)}>X</span>
                 </div>
             <img src = {img1} className = "card-img-top" alt = {allDataa.title} />
            <div className = "card-body">

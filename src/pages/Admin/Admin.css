@@ -266,7 +266,7 @@ ul input {
   }
   .logo {
     width: 30px;
-    height: 25px;
+    height: 28px !important;
     margin-left: 2rem !important;
   }
   nav {
