@@ -66,6 +66,7 @@ const Regions = () => {
   
     return (
         <Fragment>
+        <nav>
         <div className = "main">
         <div className = "header">
         <Link to="./boss" className = "homepageLink">
@@ -93,6 +94,7 @@ const Regions = () => {
         </div>
         </div>
         </div>
+        </nav>
        </Fragment> 
     );
     
