@@ -152,11 +152,11 @@
   }
   .addRegionInput input {
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     background-color: white;
     color: black;
-    padding: 1px;
+    padding: 1px 5px;
     width: 100px;
     outline: none;
   }

@@ -176,4 +176,13 @@ span {
     font-size: 16px;
     margin-left: 43rem;
   }
+  .d-block {
+    height: 90vh;
+    border: none;
+    border: 1px transparent;
+    box-shadow: 10px 10px 5px #ccc;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
+  }
 }

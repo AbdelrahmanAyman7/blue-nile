@@ -13,7 +13,7 @@ import "./Boss.css";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Carousel from 'react-bootstrap/Carousel'
 import heroImg1 from '../../images/ngobeni-communications-MOwl8X32SNI-unsplash.jpg';
-import heroImg2 from '../../images/markus-spiske-4yK8iDaWnm8-unsplash.jpg';
+import heroImg2 from '../../images/manuel-venturini-OCRyWB2NOjM-unsplash.jpg';
 import heroImg3 from '../../images/markus-winkler-T3sNQb6NUmA-unsplash.jpg';
 
 
