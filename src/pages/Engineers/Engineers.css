@@ -1,0 +1,21 @@
+.engHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.engLogo {
+  width: 50px;
+  height: 40px;
+}
+
+@media (max-width: 800px) {
+  * {
+    font-size: 13px;
+  }
+  .engLogo {
+    width: 25px;
+    height: 27px !important;
+    padding-bottom: 3px;
+    margin-left: 2rem !important;
+  }
+}

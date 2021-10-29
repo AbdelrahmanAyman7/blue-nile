@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Regions.css'
-import img1 from "../../images/246196080_402939348095626_760896911964830040_n.png";
+import img1 from "../../images/delfi-de-la-rua-vfzfavUZmfc-unsplash.jpg";
 import logo from '../../images/home.png'; 
 import { Link } from 'react-router-dom';
 
@@ -102,8 +102,4 @@ const Regions = () => {
         
         
 export default Regions
-
-// Axios.get('https://trading-stock.herokuapp.com/authentication/logout',
-//       ).then(res=>{localStorage.clear()
-//         window.location="/"})}
 

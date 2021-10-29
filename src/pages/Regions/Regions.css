@@ -54,18 +54,18 @@
   min-width: 15rem !important;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin: 12px;
+  margin: 10px;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding: 1px;
+  padding: 0;
 }
 
 .card img {
-  height: 14rem;
-  width: 11rem;
+  height: 100%;
+  width: 18rem;
   -webkit-animation-name: opacity;
   animation-name: opacity;
   -webkit-animation-duration: 0.5s;
@@ -85,7 +85,7 @@
   color: rgb(0, 0, 0);
 }
 
-.myDetails {
+/* .myDetails {
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -111,18 +111,17 @@
 .card :hover .myDetails {
   transform: translateY(0%);
   transition: all 0.8s ease-in-out;
-}
+} */
 .removeRegion {
-  border-radius: 2px;
-  background-color: #060b26;
-  padding: 3px 8px;
+  background-color: rgba(255, 255, 255, 0.603);
+  padding: 3px 10px;
   text-align: center;
   position: relative;
   font-weight: 600;
-  color: white;
+  color: #060b26;
   position: absolute;
   top: 0;
-  left: 89%;
+  left: 90%;
   cursor: pointer;
 }
 .removeRegion span {

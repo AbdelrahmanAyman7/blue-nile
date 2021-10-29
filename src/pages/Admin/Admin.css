@@ -64,7 +64,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  padding: 1px;
+  padding: 0;
 }
 
 .cardInfo {

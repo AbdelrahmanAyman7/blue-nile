@@ -9,7 +9,8 @@ import Regions from './pages/Regions/Regions';
 import Statics from './pages/Statics/Statics';
 import Support from './pages/Support/Support';
 import Admin from "./pages/Admin/Admin";
-
+import Engineers from "./pages/Engineers/Engineers";
+import { fadeIn } from 'react-animations'
 
 
 const App = () => {
@@ -37,6 +38,7 @@ console.log(change)
         <Route exact path="/boss" component= {()=><Boss autho={cc}/>} />
         <Route exact path="/Notifications" component={Notifications} />
         <Route exact path="/regions" component={Regions} />
+        <Route exact path="/engineers" component={Engineers} />              
         <Route exact path="/statics" component={Statics} />
         <Route exact path="/support" component={Support} />              
         </Switch>
