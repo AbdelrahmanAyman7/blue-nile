@@ -6,7 +6,7 @@ import './Engineers.css'
 import img1 from "../../images/delfi-de-la-rua-vfzfavUZmfc-unsplash.jpg";
 import logo from '../../images/home.png'; 
 import { Link } from 'react-router-dom';
-
+import { Slide } from "react-awesome-reveal";
 
 const Engineers = () => {
 
@@ -22,13 +22,13 @@ const Engineers = () => {
     }
    
     const data = {
-        R_name:engineer
+        name:engineer
     }
 
     
     
     const removeEngineers = (id) => {
-        axios.delete(`https://sleepy-mesa-34762.herokuapp.com/Regions/Remove/${id}`,header)
+        axios.delete(`https://sleepy-mesa-34762.herokuapp.com/Enges/Remove/${id}`,header)
      
         .then(load=>{
                 alert("تم حذف المهندس بنجاح")
@@ -39,7 +39,7 @@ const Engineers = () => {
     
         
     useEffect(() => {
-     axios.get("https://sleepy-mesa-34762.herokuapp.com/Regions/GetAll",header)
+     axios.get("https://sleepy-mesa-34762.herokuapp.com/Enges/GetAll",header)
     .then(res => {
       console.log("response",res)
       setEngineers(res.data)
@@ -57,6 +57,7 @@ const Engineers = () => {
         </Link>
      
         </div>
+        <Slide direction = {"up"} bottom cascade>
         <div className="container col-12">
         <div className="row"> 
         {engineers.map((Eng,id) => (
@@ -66,12 +67,13 @@ const Engineers = () => {
             </div>
             <img src = {img1} className = "card-img-top" alt = {Eng.title} />
             <div className = "card-body">
-             <h5 className = "card-title">{Eng.R_name}</h5>
+             <h5 className = "card-title">{Eng.name}</h5>
              </div>
             </div>     
         ))} 
         </div>
         </div>
+        </Slide>  
         </div>
         </nav>
        </Fragment> 

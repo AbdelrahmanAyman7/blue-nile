@@ -6,6 +6,7 @@ import './Regions.css'
 import img1 from "../../images/delfi-de-la-rua-vfzfavUZmfc-unsplash.jpg";
 import logo from '../../images/home.png'; 
 import { Link } from 'react-router-dom';
+import { Slide } from "react-awesome-reveal";
 
 const Regions = () => {
 
@@ -77,8 +78,10 @@ const Regions = () => {
         <button className = "addRegionBtn" onClick = {(e) => addRegions(e)}>اضف منطقة</button>
         </div>
         </div>
+        <Slide direction = {"up"} bottom cascade>
         <div className="container col-12">
         <div className="row"> 
+        
         {regions.map((regionn,id) => (
             <div className = "card col-sm-2" key = {regionn.id}>
             <div className = "removeRegion">
@@ -88,10 +91,13 @@ const Regions = () => {
             <div className = "card-body">
              <h5 className = "card-title">{regionn.R_name}</h5>
              </div>
-            </div>     
+            </div> 
+
         ))} 
+        
         </div>
         </div>
+        </Slide>  
         </div>
         </nav>
        </Fragment> 

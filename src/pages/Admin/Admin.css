@@ -2,13 +2,15 @@
   display: block;
   position: relative;
   float: right;
-  background: #060b26;
+  background: transparent !important;
   padding: 2rem;
   text-decoration: none;
   white-space: nowrap;
   color: #fff;
 }
-
+.navbar {
+  background-color: #fff !important;
+}
 #navHeader {
   display: none;
   overflow: hidden;
@@ -20,7 +22,7 @@
 }
 .ApplyBtn {
   padding: 5px 0px;
-  background-color: #1a83ff;
+  background-color: #060b26;
   color: white;
   border: none;
   border-radius: 10px;
@@ -87,7 +89,7 @@
   top: 0;
   overflow: hidden;
   border: none;
-  background-color: #060b267e;
+  background-color: red;
   color: gold;
   border-radius: 2px;
   font-size: 30px;
@@ -108,7 +110,7 @@
 nav {
   margin: 0;
   padding: 0;
-  background-color: #060b26;
+  background-color: #fff;
   height: 100%;
   min-height: 100vh;
 }
@@ -122,7 +124,7 @@ nav:after {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  color: white;
+  color: #060b26 !important;
   list-style: none;
   margin-left: 2rem;
 }
@@ -143,7 +145,7 @@ ul li {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  background: #060b26;
+  background: #060b26 !important;
   padding: 1em;
   text-decoration: none;
   white-space: nowrap;
@@ -266,7 +268,7 @@ ul input {
   }
   .logo {
     width: 30px;
-    height: 28px !important;
+    height: 25px !important;
     margin-left: 2rem !important;
   }
   nav {
