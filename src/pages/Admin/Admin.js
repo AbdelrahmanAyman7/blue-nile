@@ -8,7 +8,7 @@ import * as FaIcons from "react-icons/fa"; //Now i get access to all the icons
 import * as AiIcons from "react-icons/ai";
 import { IconContext } from "react-icons";
 import logo from '../../images/home.png'; 
-import { Slide } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 
 var MyADMINS = []
 
@@ -119,6 +119,7 @@ const removeAdminsRegion = (id) => {
       <Fragment>
       <IconContext.Provider value={{ color: "#060b26", size:"1.3em"}}>
       <nav>
+      
       <Link to="./boss" className = "homepageLink">
       <img className = "logo" src = {logo} alt = "title"></img>
       </Link>
@@ -154,8 +155,8 @@ const removeAdminsRegion = (id) => {
            </div>
       
           </div>
-
-          <Slide direction = {"up"} bottom cascade>
+          </nav>  
+          <Zoom direction = {"out"} bottom cascade>
          <div className="container col-12">
        <div className="row"> 
          {AllData.map((allDataa,id) => (
@@ -175,8 +176,8 @@ const removeAdminsRegion = (id) => {
         ))} 
          </div>
          </div>
-         </Slide>  
-         </nav>
+         </Zoom>
+     
          </IconContext.Provider>
       </Fragment>
     )

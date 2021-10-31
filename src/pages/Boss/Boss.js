@@ -34,7 +34,7 @@ const Boss = () => {
 
   return (
     <Fragment>
-      <IconContext.Provider value={{ color: "#060b26",size:"1.5em" }}>
+      <IconContext.Provider value={{ color: "#072a40",size:"1.5em" }}>
       
         {/* All the icons now are white */}
         
@@ -71,7 +71,7 @@ const Boss = () => {
         <Carousel fade>
         <Carousel.Item>
         <img
-          className = "d-block w-100"
+          className = "d-block "
           src= {heroImg1}
           alt="" 
         />
@@ -86,7 +86,7 @@ const Boss = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className = "d-block w-100"
+          className = "d-block "
           src= {heroImg2}
           alt=""
         />
@@ -100,7 +100,7 @@ const Boss = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className = "d-block w-100"
+          className = "d-block"
           src= {heroImg3}
           alt=""
         />

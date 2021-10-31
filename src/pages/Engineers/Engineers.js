@@ -6,7 +6,7 @@ import './Engineers.css'
 import img1 from "../../images/delfi-de-la-rua-vfzfavUZmfc-unsplash.jpg";
 import logo from '../../images/home.png'; 
 import { Link } from 'react-router-dom';
-import { Slide } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 
 const Engineers = () => {
 
@@ -57,7 +57,7 @@ const Engineers = () => {
         </Link>
      
         </div>
-        <Slide direction = {"up"} bottom cascade>
+        <Zoom direction = {"out"} bottom cascade>
         <div className="container col-12">
         <div className="row"> 
         {engineers.map((Eng,id) => (
@@ -73,7 +73,7 @@ const Engineers = () => {
         ))} 
         </div>
         </div>
-        </Slide>  
+        </Zoom>  
         </div>
         </nav>
        </Fragment> 

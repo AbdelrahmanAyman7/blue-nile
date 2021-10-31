@@ -7,7 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: #f9f7f0;
+  height: 80px;
 }
+
 .logo {
   width: 40px;
   height: 35px;
@@ -33,7 +36,7 @@
 }
 .addRegionBtn {
   padding: 5px 25px;
-  background-color: #060b26;
+  background-color: #072a40;
   color: white;
   border: none;
   border-radius: 10px;
@@ -82,7 +85,7 @@
 }
 .card-title {
   font-size: medium;
-  color: rgb(0, 0, 0);
+  color: #072a40;
 }
 
 /* .myDetails {
@@ -151,7 +154,7 @@
   }
   .addRegionInput input {
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     cursor: pointer;
     background-color: #dddddd;
     color: black;
@@ -163,11 +166,11 @@
     display: block;
     position: relative;
     float: right;
-    background: #060b26;
+    background: #072a40;
     padding: 1px 4px;
     text-decoration: none;
     white-space: nowrap;
-    color: #fff;
+    color: white;
   }
   .logo {
     width: 25px;

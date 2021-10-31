@@ -6,7 +6,7 @@ import './Regions.css'
 import img1 from "../../images/delfi-de-la-rua-vfzfavUZmfc-unsplash.jpg";
 import logo from '../../images/home.png'; 
 import { Link } from 'react-router-dom';
-import { Slide } from "react-awesome-reveal";
+import { Zoom } from "react-awesome-reveal";
 
 const Regions = () => {
 
@@ -78,7 +78,7 @@ const Regions = () => {
         <button className = "addRegionBtn" onClick = {(e) => addRegions(e)}>اضف منطقة</button>
         </div>
         </div>
-        <Slide direction = {"up"} bottom cascade>
+        <Zoom direction = {"out"} bottom cascade>
         <div className="container col-12">
         <div className="row"> 
         
@@ -97,7 +97,7 @@ const Regions = () => {
         
         </div>
         </div>
-        </Slide>  
+        </Zoom>  
         </div>
         </nav>
        </Fragment> 
