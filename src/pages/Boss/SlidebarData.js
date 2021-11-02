@@ -23,6 +23,12 @@ export const SidebarData = [
   },
 
   {
+    title: " المهندسين",
+    path: "/Admin",
+    icon: <FcBusinessman/>,
+    cName: "nav-text"
+  },
+  {
     title: "تسكين المهندسين",
     path: "/Admin",
     icon: <FcBusinessman/>,

@@ -2,7 +2,9 @@
   --navBg: #f9f7f0;
   list-style: none;
 }
-
+nav {
+  overflow-y: scroll !important;
+}
 .navbar {
   background-color: var(--navBg);
   height: 80px;
@@ -37,7 +39,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  padding: 8px 0 8px 16px;
+  padding: 15px 0 8px 16px;
   list-style: none;
   height: 60px;
 }
@@ -84,5 +86,13 @@ span {
 @media (max-width: 800px) {
   * {
     font-size: 13px !important;
+  }
+  .nav-text {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0px 0 40px 16px;
+    list-style: none;
+    height: 60px;
   }
 }

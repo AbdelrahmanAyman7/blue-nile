@@ -17,22 +17,22 @@ export const SidebarData = [
     icon: <AiIcons.AiFillHome />,
     cName: "nav-text"
   },
-  {
-    title: "الاشعارات",
-    path: "/notifications",
-    icon: <IoIcons.IoIosPaper />,
-    cName: "nav-text"
-  },
+  // {
+  //   title: "الاشعارات",
+  //   path: "/notifications",
+  //   icon: <IoIcons.IoIosPaper />,
+  //   cName: "nav-text"
+  // },
   {
     title: "المهندسين",
     path: "/Admin",
     icon: <FaIcons.FaCartPlus />,
     cName: "nav-text"
   },
-  {
-    title: "الدعم",
-    path: "/support",
-    icon: <IoIcons.IoMdHelpCircle />,
-    cName: "nav-text"
-  }
+  // {
+  //   title: "الدعم",
+  //   path: "/support",
+  //   icon: <IoIcons.IoMdHelpCircle />,
+  //   cName: "nav-text"
+  // }
 ];
