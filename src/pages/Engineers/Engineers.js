@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Engineers.css'
-import img1 from "../../images/delfi-de-la-rua-vfzfavUZmfc-unsplash.jpg";
+import img1 from "../../images/engineer.png";
 import logo from '../../images/home.png'; 
 import { Link } from 'react-router-dom';
 import { Zoom } from "react-awesome-reveal";

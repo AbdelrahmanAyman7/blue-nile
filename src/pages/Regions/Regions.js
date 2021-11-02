@@ -70,13 +70,14 @@ const Regions = () => {
         <nav>
         <div className = "main">
         <div className = "header">
+        <div className = "addRegionInput">
+        <button className = "addRegionBtn" onClick = {(e) => addRegions(e)}>اضف منطقة</button>
+        <input type = "text" value = {region} onChange = {(e) => setRegion(e.target.value)}></input>
+        </div>
         <Link to="./boss" className = "homepageLink">
         <img className = "logo" src = {logo} alt = "title"></img>
         </Link>
-        <div className = "addRegionInput">
-        <input type = "text" value = {region} onChange = {(e) => setRegion(e.target.value)}></input>
-        <button className = "addRegionBtn" onClick = {(e) => addRegions(e)}>اضف منطقة</button>
-        </div>
+
         </div>
         <Zoom direction = {"out"} bottom cascade>
         <div className="container col-12">

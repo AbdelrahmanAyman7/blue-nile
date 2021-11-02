@@ -21,8 +21,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 20px;
-  margin-right: 7rem;
 }
 .addRegionInput input {
   border: none;
@@ -31,7 +29,7 @@
   background-color: #dddddd;
   color: black;
   padding: 0.2rem 1.5rem;
-  margin-right: 1rem;
+  margin-left: 5rem;
   outline: none;
 }
 .addRegionBtn {
@@ -143,7 +141,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding-right: 20px;
+    padding-left: 2rem;
+    /* padding-right: 20px; */
   }
 
   .addRegionInput {
@@ -161,6 +160,7 @@
     padding: 1px 5px;
     width: 100px;
     outline: none;
+    margin: 15px;
   }
   .addRegionBtn {
     display: block;

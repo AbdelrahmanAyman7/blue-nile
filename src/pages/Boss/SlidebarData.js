@@ -24,7 +24,7 @@ export const SidebarData = [
 
   {
     title: " المهندسين",
-    path: "/Admin",
+    path: "/engineers",
     icon: <FcBusinessman/>,
     cName: "nav-text"
   },
