@@ -136,7 +136,7 @@ const removeAdminsRegion = (id) => {
   
       <Fragment>
       <IconContext.Provider value={{ color: "#060b26", size:"1.3em"}}>
-      <nav>
+      <nav id = "aNav">
       
       <Link to="./boss" className = "homepageLink">
       <img className = "logo" src = {logo} alt = "title"></img>

@@ -11,6 +11,7 @@ import Support from './pages/Support/Support';
 import Admin from "./pages/Admin/Admin";
 import Engineers from "./pages/Engineers/Engineers";
 import { fadeIn } from 'react-animations'
+import EngForm from './pages/Eng/EngForm';
 
 
 const App = () => {
@@ -40,7 +41,9 @@ console.log(change)
         <Route exact path="/regions" component={Regions} />
         <Route exact path="/engineers" component={Engineers} />              
         <Route exact path="/statics" component={Statics} />
-        <Route exact path="/support" component={Support} />              
+        <Route exact path="/support" component={Support} /> 
+        <Route exact path="/engForm" component={EngForm} />              
+
         </Switch>
       </Router>
     );
