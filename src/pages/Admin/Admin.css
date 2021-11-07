@@ -376,3 +376,19 @@ ul input {
     color: #fff;
   }
 }
+.removeEng {
+  padding: 5px 20px;
+  width: 200px;
+  background-color: #f9f7f0;
+  color: #060b26;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
+.removeEngSpan {
+  background-color: #fff;
+  width: 20px;
+  position: absolute;
+  right: 20%;
+}

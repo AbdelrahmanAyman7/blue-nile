@@ -20,6 +20,7 @@ const Admin = ({autho}) => {
   const [admins, setAdmins] = useState([]);
   const [AllData, setAllData] = useState([]);
 
+ 
 
   const handleNavbar = () => {
     let x = document.getElementById("navHeader");
@@ -54,16 +55,18 @@ console.log("admins",  MyADMINS )
   
 } 
 const data = 
-  {
-    Regions: region,
-    Enges: MyADMINS
-}
+
+    {
+      R_name:region,
+      R_Enges:MyADMINS
+  }
 console.log("data",data)
 
  const sendAllData = () => {
 
-  axios.post("https://sleepy-mesa-34762.herokuapp.com/Reg_Enge/Add", data, header)
+  axios.post('https://sleepy-mesa-34762.herokuapp.com/Regions/Add_ENG', data, header)
   .then(load=>{
+    
     if (load.data === "this name is exsist before"){
       alert("هذا المهندس تم تسكينه من قبل علي هذه المنطقة")
       window.location.reload()
@@ -76,26 +79,41 @@ console.log("data",data)
 
 }
 const removeAdminsRegion = (id) => {
-  axios.delete(`https://sleepy-mesa-34762.herokuapp.com/Reg_Enge/Remove/${id}`,header)
+  axios.delete(`https://sleepy-mesa-34762.herokuapp.com/Regions/Remove/${id}`,header)
 
   .then(load=>{
       alert("تم حذف بنجاح")
       window.location.reload()
   })
 
+
+}
+
+  const removeEng = async (id,name) => {
+    const removeEnges = 
+    {
+      _id:id,
+       R_Enges:name,
+  }
+
+  await axios.post('https://sleepy-mesa-34762.herokuapp.com/Regions/Remove_ENG',removeEnges,header)
+  
+    .then(res=>{
+      if(res.data === "deleted"){
+        alert("تم حذف المهندس بنجاح")
+       window.location.reload()
+      }
+   })
 }
 
  useEffect(() => {
-  axios.get("https://sleepy-mesa-34762.herokuapp.com/Reg_Enge/GetAll",header)
-  .then(res => {
-    console.log("Alldata",res)
-    setAllData(res.data)
-  }) 
+   
   
   axios.get("https://sleepy-mesa-34762.herokuapp.com/Regions/GetAll",header)
   .then(res => {
     console.log("AllRegions",res)
     setRegions(res.data)
+
   }) 
   
   axios.get("https://sleepy-mesa-34762.herokuapp.com/Enges/GetAll",header)
@@ -159,16 +177,17 @@ const removeAdminsRegion = (id) => {
           <Zoom direction = {"out"} bottom cascade>
          <div className="container col-12">
        <div className="row"> 
-         {AllData.map((allDataa,id) => (
+              
+         {regions.map((allDataa,id) => (
              <div className = "card col-sm-2" key = {allDataa.id}>
              <div className = "removeRegion">
                 <span onClick = {()=>removeAdminsRegion(allDataa._id)}>X</span>
                 </div>
             <img src = {img1} className = "card-img-top" alt = {allDataa.title} />
            <div className = "card-body">
-            <h5 className = "card-title">{allDataa.Regions}</h5><hr/>
-            <h5 className = "card-title">{allDataa.Enges.map(id=>{
-              return <li style = {{listStyle:"none"}}>{id}</li>
+            <h5 className = "card-title">{allDataa.R_name}</h5><hr/>
+            <h5 className = "card-title">{allDataa.R_Enges.map(id=>{
+              return <li className = "removeEng" style = {{listStyle:"none"}}>{id}<span className = "removeEngSpan" onClick = {()=>removeEng(allDataa._id,id)}>x</span></li> 
             })}</h5>
             </div>
             </div>     
@@ -185,56 +204,5 @@ const removeAdminsRegion = (id) => {
 
 
 }
-
-//   return (
-//     <Fragment>
-    
-//     <ul class="main-navigation">
-//     <li className = "Homepage">الصفحة الرئيسية</li>
-//     <li className = "Admins">المهندسين
-//     <ul>
-//     {admins.map((adminn,id) => (
-//      <div className = "adminList">
-//       <li>{adminn.name}<input type = "checkbox" onChange = {()=>getAdminId(adminn._id)}></input></li>
-//       </div>
-//       ))} 
-//      </ul>
-//     </li>
-
-//     <li className = "Admins">المناطق
-//     <ul>
-//     {regions.map((regionn,id) => (
-//      <div className = "adminList">
-//       <li>{regionn.name}<input type = "checkbox" onChange = {()=>getAdminId(regionn._id)}></input></li>
-//       </div>
-//       ))} 
-//      </ul>
-//     </li>
-
-    
-//    <div className = "Apply">
-//     <button className = "ApplyBtn" onClick = {() => sendAdminRegion()}>تسكين</button>
-//    </div>
-  
-//    </ul>
-    
-//     <div className="container col-12">
-//     <div className="row"> 
-//     {admins.map((adminn,id) => (
-//         <div className = "card col-sm-2" key = {adminn.id}>
-//         <img src = {img1} className = "card-img-top" alt = {adminn.title} />
-//         <div className = "card-body">
-//          <h5 className = "card-title">{adminn.name}</h5>
-//          <div className = "myDetails">التفاصيل</div> 
-//          </div>
-//         </div>     
-        
-//     ))} 
-//     </div>
-//     </div>
-    
-//     </Fragment>
-//   );
-// };
 
 export default Admin;
