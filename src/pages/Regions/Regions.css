@@ -12,8 +12,8 @@
 }
 
 .logo {
-  width: 40px;
-  height: 35px;
+  width: 35px;
+  height: 30px;
   margin-top: 3px;
 }
 
@@ -26,7 +26,7 @@
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  background-color: #dddddd;
+  background-color: #fff;
   color: black;
   padding: 0.2rem 1.5rem;
   margin-left: 5rem;
@@ -113,19 +113,20 @@
   transform: translateY(0%);
   transition: all 0.8s ease-in-out;
 } */
-.removeRegion {
-  background-color: transparent;
-  padding: 3px 10px;
+.removeX {
+  background-color: #060b26;
+  padding: 3px 8px;
   text-align: center;
   position: relative;
   font-weight: 800;
-  color: #060b26;
+  color: #fff;
   position: absolute;
   top: 0;
-  left: 90%;
+  right: 0;
   cursor: pointer;
+  border: 0.5px solid transparent;
 }
-.removeRegion span {
+.removeX span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,12 +156,11 @@
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    background-color: #dddddd;
+    background-color: #fff;
     color: black;
     padding: 1px 5px;
     width: 100px;
     outline: none;
-    margin: 15px;
   }
   .addRegionBtn {
     display: block;
@@ -176,6 +176,7 @@
     width: 25px;
     height: 25px !important;
     padding-bottom: 3px;
+    margin-top: 1rem;
     margin-left: 2rem !important;
   }
 }

@@ -139,21 +139,19 @@ ul {
   background: #f9f7f0 !important;
   cursor: pointer;
   flex-direction: column;
-  max-height: 180px;
-  overflow: scroll;
+  max-height: 200px;
+  overflow-y: scroll;
 }
 ul li {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background: #f9f7f0 !important;
+  display: block;
+  background: black;
   padding: 1em;
   text-decoration: none;
   white-space: nowrap;
+  background: #f9f7f0 !important;
   color: #178ca4 !important;
-  width: 250px;
+  padding-right: 120px;
 }
-
 li ul {
   display: none;
   /* height: 400px; */
@@ -199,6 +197,7 @@ ul input {
   justify-content: flex-start;
   padding: 20px;
   margin-left: 7px;
+  width: 150px;
 }
 .ApplyBtn {
   padding: 8px 20px;
@@ -248,6 +247,7 @@ ul input {
   justify-content: flex-start;
   padding: 20px;
   margin-right: 1rem;
+  width: 150px;
 }
 .ApplyBtn {
   padding: 8px 20px;
@@ -267,7 +267,7 @@ ul input {
     color: #fff;
   }
   .logo {
-    width: 30px;
+    width: 25px;
     height: 25px !important;
     margin-left: 2rem !important;
   }
@@ -296,22 +296,21 @@ ul input {
     padding: 0;
     margin: 0;
     width: 250px;
-    background: black;
+    background: #f9f7f0 !important;
     cursor: pointer;
     flex-direction: column;
     max-height: 200px;
     overflow-y: scroll;
   }
   ul li {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: block;
     background: black;
     padding: 1em;
     text-decoration: none;
     white-space: nowrap;
-    color: #fff;
-    width: 250px;
+    background: #f9f7f0 !important;
+    color: #178ca4 !important;
+    padding-right: 120px;
   }
 
   /* This hides the dropdowns */
@@ -361,10 +360,11 @@ ul input {
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px;
+    padding: 20px !important;
+    width: 150px;
   }
   .ApplyBtn {
-    padding: 5px 8px;
+    padding: 5px 8px !important;
   }
   .logoContainer {
     display: block;
@@ -377,7 +377,7 @@ ul input {
     color: #fff;
   }
 }
-.removeEng {
+/* .removeEng {
   padding: 5px 20px;
   width: 200px;
   background-color: #f9f7f0;
@@ -392,4 +392,4 @@ ul input {
   width: 20px;
   position: absolute;
   right: 20%;
-}
+} */

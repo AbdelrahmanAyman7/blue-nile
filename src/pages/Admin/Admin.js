@@ -4,19 +4,18 @@ import './Admin.css';
 import img1 from "../../images/thisisengineering-raeng-5Vb9SeLbiWw-unsplash.jpg";
 import logo1 from '../../images/home.png'; 
 import { Link,Redirect } from "react-router-dom";
-import * as FaIcons from "react-icons/fa"; //Now i get access to all the icons
+import * as FaIcons from "react-icons/fa"; 
 import * as AiIcons from "react-icons/ai";
 import { IconContext } from "react-icons";
 import logo from '../../images/home.png'; 
 import { Zoom } from "react-awesome-reveal";
 
-var MyADMINS = []
+var MyADMINS = [
+]
 
 const Admin = ({autho}) => {
-  // const [selected, setSelected] = useState([]);
-  const [region, setRegion] = useState("");
+  const [region, setRegion] = useState([]);
   const [regions, setRegions] = useState([]);
-  // const [admin, setAdmin] = useState("");
   const [admins, setAdmins] = useState([]);
   const [AllData, setAllData] = useState([]);
 
@@ -31,8 +30,6 @@ const Admin = ({autho}) => {
     }
   }
  
- 
-  // var selectedReg = []
   const header = {
     headers : {
         'Accept': 'application/json',
@@ -43,27 +40,27 @@ const Admin = ({autho}) => {
  
  
 
- const getAdminId = (Name) => {
-  MyADMINS.push(Name)
-  console.log(MyADMINS)
+ const getAdminId = (Name,Phone) => {
+  MyADMINS.push({name:Name,phone:Phone})
+  console.log("myAdmins",Name,Phone)
   
  }  
-console.log("admins",  MyADMINS )
  const getRegionId = (Name) => {
   setRegion(Name)
   
   
 } 
-const data = 
-
-    {
-      R_name:region,
-      R_Enges:MyADMINS
-  }
-console.log("data",data)
 
  const sendAllData = () => {
-
+  const data = 
+  {
+    R_name:region,
+    R_Enges: [{
+      name:MyADMINS[0].name,
+      phone: MyADMINS[0].phone
+    }],
+ }
+ console.log("dataaaaaaaaaaaaa",data)
   axios.post('https://sleepy-mesa-34762.herokuapp.com/Regions/Add_ENG', data, header)
   .then(load=>{
     
@@ -74,7 +71,6 @@ console.log("data",data)
       alert("تم التسكين بنجاح")
       window.location.reload()
     }
-
 })
 
 }
@@ -93,7 +89,7 @@ const removeAdminsRegion = (id) => {
     const removeEnges = 
     {
       _id:id,
-       R_Enges:name,
+      Enges:name,
   }
 
   await axios.post('https://sleepy-mesa-34762.herokuapp.com/Regions/Remove_ENG',removeEnges,header)
@@ -107,8 +103,6 @@ const removeAdminsRegion = (id) => {
 }
 
  useEffect(() => {
-   
-  
   axios.get("https://sleepy-mesa-34762.herokuapp.com/Regions/GetAll",header)
   .then(res => {
     console.log("AllRegions",res)
@@ -154,7 +148,7 @@ const removeAdminsRegion = (id) => {
              {admins.map((adminn,id) => (
               <li><input type = "checkbox" 
              
-               onChange = {()=>getAdminId(adminn.name)}></input>{adminn.name}</li>
+               onChange = {()=>getAdminId(adminn.name,adminn.phone)}></input>{adminn.name}</li>
               ))} 
              </ul> 
              </li>
@@ -175,19 +169,19 @@ const removeAdminsRegion = (id) => {
           </div>
           </nav>  
           <Zoom direction = {"out"} bottom cascade>
-         <div className="container col-12">
+         <div className="col-12">
        <div className="row"> 
               
          {regions.map((allDataa,id) => (
              <div className = "card col-sm-2" key = {allDataa.id}>
-             <div className = "removeRegion">
+             <div className = "removeX">
                 <span onClick = {()=>removeAdminsRegion(allDataa._id)}>X</span>
                 </div>
             <img src = {img1} className = "card-img-top" alt = {allDataa.title} />
            <div className = "card-body">
             <h5 className = "card-title">{allDataa.R_name}</h5><hr/>
-            <h5 className = "card-title">{allDataa.R_Enges.map(id=>{
-              return <li className = "removeEng" style = {{listStyle:"none"}}>{id}<span className = "removeEngSpan" onClick = {()=>removeEng(allDataa._id,id)}>x</span></li> 
+            <h5 className = "card-title">{allDataa.R_Enges.map(data=>{
+              return <li className = "removeEng" style = {{listStyle:"none"}}>{data.name}<span className = "removeEngSpan" onClick = {()=>removeEng(allDataa._id,id)}>x</span></li> 
             })}</h5>
             </div>
             </div>     

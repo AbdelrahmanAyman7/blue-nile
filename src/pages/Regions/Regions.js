@@ -80,12 +80,12 @@ const Regions = () => {
 
         </div>
         <Zoom direction = {"out"} bottom cascade>
-        <div className="container col-12">
+        <div className="col-12">
         <div className="row"> 
         
         {regions.map((regionn,id) => (
             <div className = "card col-sm-2" key = {regionn.id}>
-            <div className = "removeRegion">
+            <div className = "removeX">
             <span onClick = {() => removeRegions(regionn._id)}>X</span>
             </div>
             <img src = {img1} className = "card-img-top" alt = {regionn.title} />

@@ -1,0 +1,18 @@
+.errorImage {
+  width: 100% !important;
+  height: 100vh;
+  object-fit: cover;
+}
+.errorBackBtn {
+  width: 35px;
+  height: 30px;
+  background: transparent !important;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+@media (max-width: 1000px) {
+  .errorImage {
+    object-fit: fill;
+  }
+}

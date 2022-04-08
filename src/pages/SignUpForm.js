@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import { Route, useHistory } from "react-router";
+
 
 const SignUpForm  = () => {
    
@@ -12,6 +14,7 @@ const SignUpForm  = () => {
       phone: "",
       key:""
     })
+    let history = useHistory();
 
  const handleSubmit = (e) => {
   e.preventDefault();
@@ -28,6 +31,7 @@ const SignUpForm  = () => {
       window.location.reload()
     })
     .catch(err => {
+      history.push("/error");
       console.log(err) 
     })
 

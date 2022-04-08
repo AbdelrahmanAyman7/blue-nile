@@ -58,11 +58,11 @@ const Engineers = () => {
      
         </div>
         <Zoom direction = {"out"} bottom cascade>
-        <div className="container col-12">
+        <div className="col-12">
         <div className="row"> 
         {engineers.map((Eng,id) => (
             <div className = "card col-sm-2" key = {Eng.id}>
-            <div className = "removeRegion">
+            <div className = "removeX">
             <span onClick = {() => removeEngineers(Eng._id)}>X</span>
             </div>
             <img src = {img1} className = "card-img-top" alt = {Eng.title} />
